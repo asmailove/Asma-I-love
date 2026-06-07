@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>❤️ For Asma ❤️</title>
 
 <style>
@@ -20,12 +21,7 @@ overflow:hidden;
 display:flex;
 justify-content:center;
 align-items:center;
-background:
-linear-gradient(-45deg,
-#ff006e,
-#ff4d6d,
-#8338ec,
-#3a86ff);
+background:linear-gradient(-45deg,#ff0080,#ff4d6d,#c850c0,#ff5e62);
 background-size:400% 400%;
 animation:bgMove 12s ease infinite;
 }
@@ -46,10 +42,7 @@ z-index:2;
 font-size:60px;
 font-weight:900;
 color:white;
-text-shadow:
-0 0 10px #fff,
-0 0 30px #ff4d6d,
-0 0 60px #ff4d6d;
+text-shadow:0 0 15px white,0 0 40px #ff4d6d;
 animation:pulse 2s infinite;
 }
 
@@ -59,9 +52,8 @@ animation:pulse 2s infinite;
 
 .hint{
 margin-top:10px;
+font-size:22px;
 color:white;
-font-size:18px;
-opacity:.9;
 }
 
 .numbers{
@@ -81,53 +73,61 @@ font-size:24px;
 font-weight:bold;
 cursor:pointer;
 color:white;
-background:rgba(255,255,255,.15);
+background:rgba(255,255,255,.18);
 backdrop-filter:blur(15px);
-box-shadow:0 8px 25px rgba(0,0,0,.25);
-transition:.4s;
-}
-
-.btn:hover{
-transform:translateY(-5px) scale(1.05);
+box-shadow:0 10px 30px rgba(0,0,0,.25);
 }
 
 .reveal{
 display:none;
-animation:fadeIn 1.5s ease;
 }
 
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:scale(.8);
-}
-to{
-opacity:1;
-transform:scale(1);
-}
+.card{
+width:95%;
+max-width:500px;
+padding:25px;
+border-radius:30px;
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.25);
+box-shadow:0 0 30px rgba(255,255,255,.15);
 }
 
-.loveToo{
-font-size:55px;
+.profile{
+width:120px;
+height:120px;
+margin:auto;
+border-radius:50%;
+overflow:hidden;
+border:4px solid white;
+box-shadow:0 0 25px white;
+}
+
+.profile img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.loveTitle{
+font-size:40px;
 font-weight:900;
+margin-top:15px;
 color:white;
-margin-bottom:20px;
-text-shadow:
-0 0 10px white,
-0 0 35px #ff4d6d;
+text-shadow:0 0 15px white,0 0 40px #ff4d6d;
 }
 
 .heart{
-font-size:180px;
 position:relative;
-animation:heartBeat 1.4s infinite;
-filter:drop-shadow(0 0 25px #ff4d6d);
+font-size:180px;
+margin-top:10px;
+animation:heartbeat 1.4s infinite;
+filter:drop-shadow(0 0 20px #ff1744)
+drop-shadow(0 0 60px #ff1744);
 }
 
-@keyframes heartBeat{
-50%{
-transform:scale(1.12);
-}
+@keyframes heartbeat{
+50%{transform:scale(1.12);}
 }
 
 .name{
@@ -135,25 +135,41 @@ position:absolute;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
-font-size:28px;
-font-weight:bold;
+font-size:24px;
+font-weight:900;
 color:white;
-text-shadow:
-0 0 10px white,
-0 0 20px gold;
+text-shadow:0 0 10px white,0 0 30px gold;
 }
 
-.message{
-margin-top:25px;
-font-size:24px;
+.typing{
+height:60px;
+margin-top:15px;
+font-size:20px;
+font-weight:bold;
 color:white;
-text-shadow:0 0 15px white;
+}
+
+.musicBtn{
+padding:12px 25px;
+border:none;
+border-radius:50px;
+font-size:18px;
+cursor:pointer;
+margin-top:10px;
+color:white;
+background:linear-gradient(45deg,#ff006e,#8338ec);
+}
+
+.bio{
+margin-top:20px;
+color:white;
+line-height:1.8;
+font-size:17px;
 }
 
 .floating{
 position:absolute;
 bottom:-100px;
-font-size:20px;
 animation:float linear infinite;
 opacity:.8;
 }
@@ -176,7 +192,9 @@ opacity:0;
 </head>
 <body>
 
-<div class="container" id="firstPage">
+<!-- PAGE 1 -->
+
+<div class="container" id="page1">
 
 <div class="title">
 I LOVE YOU ❤️
@@ -189,62 +207,116 @@ I LOVE YOU ❤️
 <div class="numbers">
 
 <button class="btn">1</button>
-
-<button class="btn" onclick="showLove()">2</button>
-
+<button class="btn" onclick="openLove()">2</button>
 <button class="btn">3</button>
-
 <button class="btn">4</button>
-
 <button class="btn">5</button>
-
 <button class="btn">6</button>
-
 <button class="btn">7</button>
-
 <button class="btn">8</button>
-
 <button class="btn">9</button>
-
 <button class="btn">10</button>
 
 </div>
 
 </div>
 
-<div class="container reveal" id="secondPage">
+<!-- PAGE 2 -->
 
-<div class="loveToo">
-I LOVE YOU TOO ❤️
+<div class="container reveal" id="page2">
+
+<div class="card">
+
+<div class="profile">
+<img src="https://picsum.photos/300">
+</div>
+
+<div class="loveTitle">
+❤️ ASMA ❤️
 </div>
 
 <div class="heart">
-
 ❤️
+<div class="name">👑 MY QUEEN 👑</div>
+</div>
 
-<div class="name">
-( ASMA + K Ami )
+<div class="typing" id="typing"></div>
+
+<button class="musicBtn" onclick="toggleMusic()">
+🎵 Play Music
+</button>
+
+<div class="bio">
+🌹 তুমি আমার জীবনের সবচেয়ে সুন্দর অনুভূতি।<br><br>
+
+তোমাকে ভালোবাসার জন্য কোনো কারণ লাগে না,
+কারণ তুমি নিজেই আমার সবচেয়ে প্রিয় কারণ। ❤️<br><br>
+
+✨ সবসময় হৃদয়ের সবচেয়ে বিশেষ জায়গায় থাকবে। ✨
 </div>
 
 </div>
 
-<div class="message">
-Forever In My Heart ❤️
 </div>
 
-</div>
+<audio id="music" loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
 
 <script>
 
-function showLove(){
+function openLove(){
 
-document.getElementById("firstPage").style.display="none";
+document.getElementById("page1").style.display="none";
+document.getElementById("page2").style.display="block";
 
-document.getElementById("secondPage").style.display="block";
+startTyping();
 
 }
 
-for(let i=0;i<80;i++){
+let started=false;
+
+function startTyping(){
+
+if(started) return;
+
+started=true;
+
+const text="❤️ You Are My Favourite Person In The World ❤️";
+
+let i=0;
+
+function type(){
+
+if(i<text.length){
+
+document.getElementById("typing").innerHTML+=text.charAt(i);
+
+i++;
+
+setTimeout(type,70);
+
+}
+
+}
+
+type();
+
+}
+
+function toggleMusic(){
+
+let music=document.getElementById("music");
+
+if(music.paused){
+music.play();
+}else{
+music.pause();
+}
+
+}
+
+for(let i=0;i<100;i++){
 
 let h=document.createElement("div");
 
@@ -256,11 +328,9 @@ h.style.left=Math.random()*100+"vw";
 
 h.style.fontSize=(12+Math.random()*30)+"px";
 
-h.style.animationDuration=
-(5+Math.random()*8)+"s";
+h.style.animationDuration=(5+Math.random()*8)+"s";
 
-h.style.animationDelay=
-Math.random()*5+"s";
+h.style.animationDelay=Math.random()*5+"s";
 
 document.body.appendChild(h);
 
