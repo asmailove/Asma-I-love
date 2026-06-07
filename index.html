@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>❤️ For Asma ❤️</title>
+<title>❤️ ASMA + কে ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -12,189 +16,495 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
+
 height:100vh;
 overflow:hidden;
+
 display:flex;
 justify-content:center;
 align-items:center;
-background:linear-gradient(-45deg,#ff0080,#ff4d6d,#c850c0,#ff5e62);
+
+background:
+linear-gradient(
+-45deg,
+#ff006e,
+#ff4d6d,
+#8338ec,
+#3a86ff
+);
+
 background-size:400% 400%;
+
 animation:bgMove 12s ease infinite;
+
+color:white;
+
 }
 
 @keyframes bgMove{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
+
+0%{
+background-position:0% 50%;
 }
 
-.container{
-text-align:center;
-padding:20px;
-z-index:2;
+50%{
+background-position:100% 50%;
 }
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+.page{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+
+transition:1s;
+
+}
+
+.hidden{
+
+display:none;
+
+}
+
+/* ===========================
+GIFT PAGE
+=========================== */
+
+.giftBox{
+
+width:220px;
+height:220px;
+
+cursor:pointer;
+
+animation:
+giftFloat 3s ease-in-out infinite;
+
+filter:
+drop-shadow(0 0 20px rgba(255,255,255,.7))
+drop-shadow(0 0 40px #ff4d6d);
+
+}
+
+@keyframes giftFloat{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+.giftTitle{
+
+font-size:42px;
+
+font-weight:800;
+
+text-align:center;
+
+margin-bottom:25px;
+
+text-shadow:
+0 0 10px white,
+0 0 25px #ff4d6d,
+0 0 50px #ff4d6d;
+
+}
+
+.giftSubtitle{
+
+margin-top:15px;
+
+font-size:20px;
+
+opacity:.95;
+
+text-align:center;
+
+}
+
+/* ===========================
+LOVE PAGE
+=========================== */
 
 .title{
-font-size:60px;
+
+font-size:65px;
+
 font-weight:900;
+
 color:white;
-text-shadow:0 0 15px white,0 0 40px #ff4d6d;
-animation:pulse 2s infinite;
+
+text-shadow:
+0 0 15px white,
+0 0 30px #ff4d6d,
+0 0 60px #ff4d6d;
+
+animation:titlePulse 2s infinite;
+
 }
 
-@keyframes pulse{
-50%{transform:scale(1.05);}
+@keyframes titlePulse{
+
+50%{
+transform:scale(1.05);
+}
+
 }
 
 .hint{
-margin-top:10px;
+
+margin-top:15px;
+
 font-size:22px;
+
 color:white;
+
 }
 
-.numbers{
+.numberGrid{
+
 margin-top:35px;
+
 display:grid;
-grid-template-columns:repeat(5,70px);
-gap:12px;
-justify-content:center;
+
+grid-template-columns:
+repeat(5,75px);
+
+gap:15px;
+
 }
 
-.btn{
-width:70px;
-height:70px;
+.numberBtn{
+
+width:75px;
+height:75px;
+
 border:none;
-border-radius:20px;
-font-size:24px;
-font-weight:bold;
+
+border-radius:25px;
+
 cursor:pointer;
+
+font-size:24px;
+font-weight:700;
+
 color:white;
-background:rgba(255,255,255,.18);
+
+background:
+rgba(255,255,255,.15);
+
 backdrop-filter:blur(15px);
-box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.25);
+
+transition:.3s;
+
 }
 
-.reveal{
-display:none;
+.numberBtn:hover{
+
+transform:
+translateY(-5px)
+scale(1.08);
+
 }
+
+/* ===========================
+PREMIUM CARD
+=========================== */
 
 .card{
+
 width:95%;
-max-width:500px;
-padding:25px;
-border-radius:30px;
-background:rgba(255,255,255,.12);
+max-width:650px;
+
+padding:30px;
+
+border-radius:35px;
+
+background:
+rgba(255,255,255,.12);
+
 backdrop-filter:blur(20px);
-border:1px solid rgba(255,255,255,.25);
-box-shadow:0 0 30px rgba(255,255,255,.15);
+
+border:
+1px solid rgba(255,255,255,.25);
+
+box-shadow:
+0 0 30px rgba(255,255,255,.15),
+0 0 80px rgba(255,0,128,.25);
+
+text-align:center;
+
 }
 
+/* PROFILE */
+
 .profile{
-width:120px;
-height:120px;
+
+width:140px;
+height:140px;
+
 margin:auto;
+
 border-radius:50%;
+
 overflow:hidden;
+
 border:4px solid white;
-box-shadow:0 0 25px white;
+
+box-shadow:
+0 0 20px white,
+0 0 50px #ff4d6d;
+
 }
 
 .profile img{
+
 width:100%;
 height:100%;
+
 object-fit:cover;
+
 }
 
-.loveTitle{
+/* NAME */
+
+.mainName{
+
+margin-top:18px;
+
 font-size:40px;
-font-weight:900;
-margin-top:15px;
-color:white;
-text-shadow:0 0 15px white,0 0 40px #ff4d6d;
+
+font-weight:800;
+
+text-shadow:
+0 0 10px white,
+0 0 25px #ff4d6d,
+0 0 50px #ff4d6d;
+
 }
+
+/* HEART */
 
 .heart{
+
 position:relative;
-font-size:180px;
+
+font-size:220px;
+
 margin-top:10px;
-animation:heartbeat 1.4s infinite;
-filter:drop-shadow(0 0 20px #ff1744)
-drop-shadow(0 0 60px #ff1744);
+
+animation:
+heartBeat 1.4s infinite;
+
+filter:
+drop-shadow(0 0 20px #ff1744)
+drop-shadow(0 0 50px #ff1744)
+drop-shadow(0 0 90px #ff1744);
+
 }
 
-@keyframes heartbeat{
-50%{transform:scale(1.12);}
+@keyframes heartBeat{
+
+50%{
+transform:scale(1.12);
 }
 
-.name{
+}
+
+.heartText{
+
 position:absolute;
+
 top:50%;
 left:50%;
-transform:translate(-50%,-50%);
-font-size:24px;
-font-weight:900;
-color:white;
-text-shadow:0 0 10px white,0 0 30px gold;
+
+transform:
+translate(-50%,-50%);
+
+font-size:26px;
+
+font-weight:800;
+
+text-align:center;
+
+text-shadow:
+0 0 10px white,
+0 0 20px gold,
+0 0 40px gold;
+
 }
+
+/* TYPING */
 
 .typing{
-height:60px;
-margin-top:15px;
-font-size:20px;
-font-weight:bold;
-color:white;
+
+height:70px;
+
+margin-top:20px;
+
+font-size:22px;
+
+font-weight:600;
+
 }
+
+/* MUSIC */
 
 .musicBtn{
-padding:12px 25px;
+
+padding:14px 30px;
+
 border:none;
+
 border-radius:50px;
-font-size:18px;
+
 cursor:pointer;
-margin-top:10px;
+
+font-size:18px;
+
 color:white;
-background:linear-gradient(45deg,#ff006e,#8338ec);
+
+margin-top:10px;
+
+background:
+linear-gradient(
+45deg,
+#ff006e,
+#8338ec
+);
+
+box-shadow:
+0 0 20px #ff006e,
+0 0 40px #8338ec;
+
 }
 
-.bio{
-margin-top:20px;
-color:white;
-line-height:1.8;
-font-size:17px;
+/* MESSAGE */
+
+.message{
+
+margin-top:25px;
+
+font-size:18px;
+
+line-height:1.9;
+
 }
+
+/* FLOATING HEARTS */
 
 .floating{
+
 position:absolute;
+
 bottom:-100px;
-animation:float linear infinite;
+
+pointer-events:none;
+
+animation:floatUp linear infinite;
+
 opacity:.8;
+
 }
 
-@keyframes float{
+@keyframes floatUp{
+
 0%{
 transform:translateY(0);
 opacity:0;
 }
+
 20%{
 opacity:1;
 }
+
 100%{
 transform:translateY(-120vh);
 opacity:0;
 }
+
 }
 
 </style>
+<div
+id="loveCounter"
+style="
+margin-top:10px;
+font-size:18px;
+font-weight:700;
+color:white;
+text-shadow:0 0 10px white;
+">
+💖 Forever & Always 💖
+</div>
 </head>
+
 <body>
 
-<!-- PAGE 1 -->
+<!-- =========================
+PAGE 1 : GIFT BOX
+========================= -->
 
-<div class="container" id="page1">
+<div class="page" id="giftPage">
+
+<div class="giftTitle">
+🎁 A Special Gift For You 💝
+</div>
+
+<img
+class="giftBox"
+id="giftBtn"
+src="https://cdn-icons-png.flaticon.com/512/869/869869.png"
+alt="Gift Box"
+>
+
+<div class="giftSubtitle">
+✨ Tap The Gift To Open ✨
+<br><br>
+Someone Has Prepared
+A Special Surprise For You ❤️
+</div>
+
+</div>
+
+<!-- =========================
+PAGE 2 : NUMBER CHALLENGE
+========================= -->
+
+<div class="page hidden" id="numberPage">
 
 <div class="title">
 I LOVE YOU ❤️
@@ -204,135 +514,426 @@ I LOVE YOU ❤️
 ✨ Click Number 2 ✨
 </div>
 
-<div class="numbers">
+<div class="numberGrid">
 
-<button class="btn">1</button>
-<button class="btn" onclick="openLove()">2</button>
-<button class="btn">3</button>
-<button class="btn">4</button>
-<button class="btn">5</button>
-<button class="btn">6</button>
-<button class="btn">7</button>
-<button class="btn">8</button>
-<button class="btn">9</button>
-<button class="btn">10</button>
+<button class="numberBtn" onclick="wrongChoice()">1</button>
 
+<button class="numberBtn" onclick="correctChoice()">2</button>
+
+<button class="numberBtn" onclick="wrongChoice()">3</button>
+
+<button class="numberBtn" onclick="wrongChoice()">4</button>
+
+<button class="numberBtn" onclick="wrongChoice()">5</button>
+
+<button class="numberBtn" onclick="wrongChoice()">6</button>
+
+<button class="numberBtn" onclick="wrongChoice()">7</button>
+
+<button class="numberBtn" onclick="wrongChoice()">8</button>
+
+<button class="numberBtn" onclick="wrongChoice()">9</button>
+
+<button class="numberBtn" onclick="wrongChoice()">10</button>
+
+</div>
+
+<div id="messageBox"
+style="
+margin-top:20px;
+font-size:20px;
+font-weight:600;
+height:35px;
+">
 </div>
 
 </div>
 
-<!-- PAGE 2 -->
+<!-- =========================
+PAGE 3 : PREMIUM LOVE PAGE
+========================= -->
 
-<div class="container reveal" id="page2">
+<div class="page hidden" id="lovePage">
 
 <div class="card">
 
 <div class="profile">
-<img src="https://picsum.photos/300">
+
+<img
+src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600"
+alt="Profile"
+>
+
 </div>
 
-<div class="loveTitle">
-❤️ ASMA ❤️
+<div class="mainName">
+❤️ ASMA + কে ❤️
 </div>
 
 <div class="heart">
+
 ❤️
-<div class="name">👑 MY QUEEN 👑</div>
+
+<div class="heartText">
+
+ASMA
+<br>
++
+<br>
+কে
+
 </div>
 
-<div class="typing" id="typing"></div>
+</div>
 
-<button class="musicBtn" onclick="toggleMusic()">
+<div
+class="typing"
+id="typingText">
+
+</div>
+
+<button
+class="musicBtn"
+onclick="toggleMusic()">
+
 🎵 Play Music
+
 </button>
 
-<div class="bio">
-🌹 তুমি আমার জীবনের সবচেয়ে সুন্দর অনুভূতি।<br><br>
+<div class="message">
+
+🌹 তুমি আমার জীবনের সবচেয়ে সুন্দর অনুভূতি।
+
+<br><br>
 
 তোমাকে ভালোবাসার জন্য কোনো কারণ লাগে না,
-কারণ তুমি নিজেই আমার সবচেয়ে প্রিয় কারণ। ❤️<br><br>
+কারণ তুমি নিজেই আমার সবচেয়ে প্রিয় কারণ।
 
-✨ সবসময় হৃদয়ের সবচেয়ে বিশেষ জায়গায় থাকবে। ✨
+<br><br>
+
+❤️ কিছু মানুষ হৃদয়ে থাকে,
+আর কিছু মানুষ পুরো হৃদয়টাই হয়ে যায়।
+
+<br><br>
+
+✨ তুমি সেই মানুষদের একজন। ✨
+
 </div>
 
 </div>
 
 </div>
 
-<audio id="music" loop>
-<source src="music.mp3" type="audio/mpeg">
+<!-- MUSIC -->
+
+<audio
+id="bgMusic"
+loop>
+
+<source
+src="music.mp3"
+type="audio/mpeg">
+
 </audio>
-
 <script>
 
-function openLove(){
+/* ==========================
+PAGE SWITCHING
+========================== */
 
-document.getElementById("page1").style.display="none";
-document.getElementById("page2").style.display="block";
+const giftPage =
+document.getElementById("giftPage");
+
+const numberPage =
+document.getElementById("numberPage");
+
+const lovePage =
+document.getElementById("lovePage");
+
+const giftBtn =
+document.getElementById("giftBtn");
+
+const messageBox =
+document.getElementById("messageBox");
+
+/* ==========================
+OPEN GIFT
+========================== */
+
+giftBtn.addEventListener("click",()=>{
+
+giftPage.classList.add("hidden");
+
+setTimeout(()=>{
+
+numberPage.classList.remove("hidden");
+
+},500);
+
+});
+
+/* ==========================
+WRONG NUMBER
+========================== */
+
+function wrongChoice(){
+
+const messages=[
+
+"😜 না না... আবার চেষ্টা করো",
+
+"❤️ হৃদয়ের উত্তর 2 এর ভিতরে আছে",
+
+"🙈 এটা না",
+
+"🌹 আরেকবার ভাবো",
+
+"✨ সঠিক সংখ্যা এখনো বাকি"
+
+];
+
+messageBox.innerHTML=
+
+messages[
+Math.floor(
+Math.random()*messages.length
+)
+];
+
+}
+
+/* ==========================
+CORRECT NUMBER
+========================== */
+
+function correctChoice(){
+
+numberPage.classList.add("hidden");
+
+setTimeout(()=>{
+
+lovePage.classList.remove("hidden");
 
 startTyping();
 
+createFireworks();
+
+},500);
+
 }
 
-let started=false;
+/* ==========================
+TYPING EFFECT
+========================== */
+
+const typingText =
+document.getElementById("typingText");
+
+const romanticText =
+
+"❤️ তুমি আমার জীবনের সবচেয়ে সুন্দর অনুভূতি ❤️";
+
+let i = 0;
 
 function startTyping(){
 
-if(started) return;
+typingText.innerHTML="";
 
-started=true;
+i=0;
 
-const text="❤️ You Are My Favourite Person In The World ❤️";
+typingLoop();
 
-let i=0;
+}
 
-function type(){
+function typingLoop(){
 
-if(i<text.length){
+if(i < romanticText.length){
 
-document.getElementById("typing").innerHTML+=text.charAt(i);
+typingText.innerHTML +=
+romanticText.charAt(i);
 
 i++;
 
-setTimeout(type,70);
+setTimeout(
+typingLoop,
+70
+);
 
 }
 
 }
 
-type();
+/* ==========================
+MUSIC BUTTON
+========================== */
 
-}
+const music =
+document.getElementById("bgMusic");
+
+let isPlaying=false;
 
 function toggleMusic(){
 
-let music=document.getElementById("music");
+if(!isPlaying){
 
-if(music.paused){
 music.play();
+
+isPlaying=true;
+
+document.querySelector(
+".musicBtn"
+).innerHTML="⏸ Pause Music";
+
 }else{
+
 music.pause();
-}
+
+isPlaying=false;
+
+document.querySelector(
+".musicBtn"
+).innerHTML="🎵 Play Music";
 
 }
 
-for(let i=0;i<100;i++){
+}
 
-let h=document.createElement("div");
+/* ==========================
+FLOATING HEARTS
+========================== */
 
-h.className="floating";
+function createHeart(){
 
-h.innerHTML="❤️";
+let heart =
+document.createElement("div");
 
-h.style.left=Math.random()*100+"vw";
+heart.className =
+"floating";
 
-h.style.fontSize=(12+Math.random()*30)+"px";
+heart.innerHTML="❤️";
 
-h.style.animationDuration=(5+Math.random()*8)+"s";
+heart.style.left =
+Math.random()*100+"vw";
 
-h.style.animationDelay=Math.random()*5+"s";
+heart.style.fontSize =
+(15+Math.random()*35)
++"px";
 
-document.body.appendChild(h);
+heart.style.animationDuration =
+(5+Math.random()*7)
++"s";
+
+document.body.appendChild(
+heart
+);
+
+setTimeout(()=>{
+
+heart.remove();
+
+},12000);
+
+}
+
+setInterval(
+createHeart,
+350
+);
+
+/* ==========================
+SPARKLES
+========================== */
+
+function createSparkle(){
+
+let sparkle =
+document.createElement("div");
+
+sparkle.innerHTML="✨";
+
+sparkle.style.position=
+"absolute";
+
+sparkle.style.left=
+Math.random()*100+"vw";
+
+sparkle.style.top=
+Math.random()*100+"vh";
+
+sparkle.style.fontSize=
+(10+Math.random()*20)
++"px";
+
+sparkle.style.opacity=".8";
+
+document.body.appendChild(
+sparkle
+);
+
+setTimeout(()=>{
+
+sparkle.remove();
+
+},2000);
+
+}
+
+setInterval(
+createSparkle,
+1000
+);
+
+/* ==========================
+MINI FIREWORKS
+========================== */
+
+function createFireworks(){
+
+for(let i=0;i<50;i++){
+
+let fire=
+document.createElement("div");
+
+fire.innerHTML="💖";
+
+fire.style.position=
+"absolute";
+
+fire.style.left="50%";
+fire.style.top="50%";
+
+fire.style.fontSize=
+(10+Math.random()*20)
++"px";
+
+fire.style.transition=
+"2s";
+
+document.body.appendChild(
+fire
+);
+
+setTimeout(()=>{
+
+fire.style.left=
+(Math.random()*100)
++"vw";
+
+fire.style.top=
+(Math.random()*100)
++"vh";
+
+fire.style.opacity="0";
+
+},50);
+
+setTimeout(()=>{
+
+fire.remove();
+
+},2500);
+
+}
 
 }
 
@@ -340,3 +941,242 @@ document.body.appendChild(h);
 
 </body>
 </html>
+/* ==========================
+LOVE COUNTER
+========================== */
+
+const loveStartDate =
+new Date("2025-01-01");
+
+function updateLoveCounter(){
+
+let now =
+new Date();
+
+let diff =
+now - loveStartDate;
+
+let days =
+Math.floor(
+diff /
+(1000*60*60*24)
+);
+
+let counter =
+document.getElementById(
+"loveCounter"
+);
+
+if(counter){
+
+counter.innerHTML =
+"💖 " +
+days +
+" Days Of Beautiful Memories 💖";
+
+}
+
+}
+
+setInterval(
+updateLoveCounter,
+1000
+);
+
+/* ==========================
+AUTO PHOTO SLIDER
+========================== */
+
+const galleryImages=[
+
+"https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600",
+
+"https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600",
+
+"https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=600",
+
+"https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600"
+
+];
+
+let currentImage=0;
+
+function autoSlider(){
+
+const profileImage =
+document.querySelector(
+".profile img"
+);
+
+if(!profileImage)
+return;
+
+currentImage++;
+
+if(
+currentImage >=
+galleryImages.length
+){
+
+currentImage=0;
+
+}
+
+profileImage.src =
+galleryImages[
+currentImage
+];
+
+}
+
+setInterval(
+autoSlider,
+4000
+);
+
+/* ==========================
+NEON BORDER PULSE
+========================== */
+
+setInterval(()=>{
+
+const card=
+document.querySelector(
+".card"
+);
+
+if(card){
+
+card.style.boxShadow=
+
+"0 0 20px rgba(255,255,255,.3)," +
+
+"0 0 40px #ff006e," +
+
+"0 0 90px #8338ec";
+
+setTimeout(()=>{
+
+card.style.boxShadow=
+
+"0 0 10px rgba(255,255,255,.2)," +
+
+"0 0 25px #ff4d6d";
+
+},800);
+
+}
+
+},1600);
+
+/* ==========================
+MOUSE / TOUCH GLOW
+========================== */
+
+document.addEventListener(
+"mousemove",
+
+(e)=>{
+
+let glow=
+document.getElementById(
+"cursorGlow"
+);
+
+if(!glow){
+
+glow=
+document.createElement(
+"div"
+);
+
+glow.id=
+"cursorGlow";
+
+glow.style.position=
+"fixed";
+
+glow.style.width=
+"180px";
+
+glow.style.height=
+"180px";
+
+glow.style.borderRadius=
+"50%";
+
+glow.style.pointerEvents=
+"none";
+
+glow.style.background=
+"radial-gradient(circle, rgba(255,255,255,.35), transparent)";
+
+glow.style.filter=
+"blur(30px)";
+
+glow.style.zIndex=
+"0";
+
+document.body.appendChild(
+glow
+);
+
+}
+
+glow.style.left=
+(e.clientX-90)+"px";
+
+glow.style.top=
+(e.clientY-90)+"px";
+
+});
+
+/* ==========================
+LOVE QUOTES ROTATOR
+========================== */
+
+const quotes=[
+
+"❤️ Love Is Not Finding Someone To Live With, It's Finding Someone You Can't Live Without.",
+
+"🌹 Every Heart Has A Story, Mine Starts With You.",
+
+"💖 You Are My Favourite Notification.",
+
+"✨ Some People Become Home To The Heart.",
+
+"❤️ You Make Ordinary Moments Feel Magical."
+
+];
+
+let quoteIndex=0;
+
+function rotateQuotes(){
+
+const typing=
+document.getElementById(
+"typingText"
+);
+
+if(!typing)
+return;
+
+typing.innerHTML=
+quotes[quoteIndex];
+
+quoteIndex++;
+
+if(
+quoteIndex>=quotes.length
+){
+
+quoteIndex=0;
+
+}
+
+}
+
+setInterval(
+rotateQuotes,
+6000
+);
