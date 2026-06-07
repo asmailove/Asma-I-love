@@ -936,11 +936,6 @@ fire.remove();
 }
 
 }
-
-</script>
-
-</body>
-</html>
 /* ==========================
 LOVE COUNTER
 ========================== */
@@ -1180,3 +1175,166 @@ setInterval(
 rotateQuotes,
 6000
 );
+/* ==========================
+SHOOTING STARS
+========================== */
+
+function createStar(){
+
+let star =
+document.createElement("div");
+
+star.style.position="fixed";
+star.style.left=Math.random()*100+"vw";
+star.style.top=Math.random()*50+"vh";
+
+star.style.width="3px";
+star.style.height="3px";
+
+star.style.background="white";
+
+star.style.borderRadius="50%";
+
+star.style.boxShadow=
+"0 0 10px white";
+
+star.style.zIndex="1";
+
+document.body.appendChild(star);
+
+let x = Math.random()*300+150;
+let y = Math.random()*300+150;
+
+star.animate(
+[
+{
+transform:"translate(0,0)",
+opacity:1
+},
+{
+transform:`translate(${x}px,${y}px)`,
+opacity:0
+}
+],
+{
+duration:2000
+}
+);
+
+setTimeout(()=>{
+star.remove();
+},2000);
+
+}
+
+setInterval(createStar,1800);
+
+/* ==========================
+VOLUME CONTROL
+========================== */
+
+function createVolumeSlider(){
+
+const slider =
+document.createElement("input");
+
+slider.type="range";
+
+slider.min="0";
+slider.max="1";
+slider.step="0.1";
+slider.value="0.5";
+
+slider.style.marginTop="15px";
+slider.style.width="200px";
+
+slider.oninput=function(){
+
+music.volume=
+this.value;
+
+};
+
+const card =
+document.querySelector(".card");
+
+if(card){
+
+card.appendChild(slider);
+
+}
+
+}
+
+setTimeout(
+createVolumeSlider,
+1500
+);
+
+/* ==========================
+EXTRA FIREWORKS
+========================== */
+
+function megaFireworks(){
+
+for(let i=0;i<100;i++){
+
+let p =
+document.createElement("div");
+
+p.innerHTML=
+["❤️","💖","✨","🌹"][Math.floor(Math.random()*4)];
+
+p.style.position=
+"fixed";
+
+p.style.left=
+"50%";
+
+p.style.top=
+"50%";
+
+p.style.fontSize=
+(10+Math.random()*25)+"px";
+
+document.body.appendChild(p);
+
+let x =
+(Math.random()*800)-400;
+
+let y =
+(Math.random()*800)-400;
+
+p.animate(
+[
+{
+transform:"translate(0,0)",
+opacity:1
+},
+{
+transform:`translate(${x}px,${y}px)`,
+opacity:0
+}
+],
+{
+duration:2500
+}
+);
+
+setTimeout(()=>{
+p.remove();
+},2500);
+
+}
+
+}
+
+/* প্রথমবার Love Page খুললে */
+setTimeout(
+megaFireworks,
+2500
+);
+</script>
+
+</body>
+</html>
