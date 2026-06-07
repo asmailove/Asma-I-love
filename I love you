@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>❤️ For Asma ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+background:
+linear-gradient(-45deg,
+#ff006e,
+#ff4d6d,
+#8338ec,
+#3a86ff);
+background-size:400% 400%;
+animation:bgMove 12s ease infinite;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.container{
+text-align:center;
+padding:20px;
+z-index:2;
+}
+
+.title{
+font-size:60px;
+font-weight:900;
+color:white;
+text-shadow:
+0 0 10px #fff,
+0 0 30px #ff4d6d,
+0 0 60px #ff4d6d;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+50%{transform:scale(1.05);}
+}
+
+.hint{
+margin-top:10px;
+color:white;
+font-size:18px;
+opacity:.9;
+}
+
+.numbers{
+margin-top:35px;
+display:grid;
+grid-template-columns:repeat(5,70px);
+gap:12px;
+justify-content:center;
+}
+
+.btn{
+width:70px;
+height:70px;
+border:none;
+border-radius:20px;
+font-size:24px;
+font-weight:bold;
+cursor:pointer;
+color:white;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
+box-shadow:0 8px 25px rgba(0,0,0,.25);
+transition:.4s;
+}
+
+.btn:hover{
+transform:translateY(-5px) scale(1.05);
+}
+
+.reveal{
+display:none;
+animation:fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:scale(.8);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+.loveToo{
+font-size:55px;
+font-weight:900;
+color:white;
+margin-bottom:20px;
+text-shadow:
+0 0 10px white,
+0 0 35px #ff4d6d;
+}
+
+.heart{
+font-size:180px;
+position:relative;
+animation:heartBeat 1.4s infinite;
+filter:drop-shadow(0 0 25px #ff4d6d);
+}
+
+@keyframes heartBeat{
+50%{
+transform:scale(1.12);
+}
+}
+
+.name{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:28px;
+font-weight:bold;
+color:white;
+text-shadow:
+0 0 10px white,
+0 0 20px gold;
+}
+
+.message{
+margin-top:25px;
+font-size:24px;
+color:white;
+text-shadow:0 0 15px white;
+}
+
+.floating{
+position:absolute;
+bottom:-100px;
+font-size:20px;
+animation:float linear infinite;
+opacity:.8;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
+
+</style>
+</head>
+<body>
+
+<div class="container" id="firstPage">
+
+<div class="title">
+I LOVE YOU ❤️
+</div>
+
+<div class="hint">
+✨ Click Number 2 ✨
+</div>
+
+<div class="numbers">
+
+<button class="btn">1</button>
+
+<button class="btn" onclick="showLove()">2</button>
+
+<button class="btn">3</button>
+
+<button class="btn">4</button>
+
+<button class="btn">5</button>
+
+<button class="btn">6</button>
+
+<button class="btn">7</button>
+
+<button class="btn">8</button>
+
+<button class="btn">9</button>
+
+<button class="btn">10</button>
+
+</div>
+
+</div>
+
+<div class="container reveal" id="secondPage">
+
+<div class="loveToo">
+I LOVE YOU TOO ❤️
+</div>
+
+<div class="heart">
+
+❤️
+
+<div class="name">
+( ASMA + ? )
+</div>
+
+</div>
+
+<div class="message">
+Forever In My Heart ❤️
+</div>
+
+</div>
+
+<script>
+
+function showLove(){
+
+document.getElementById("firstPage").style.display="none";
+
+document.getElementById("secondPage").style.display="block";
+
+}
+
+for(let i=0;i<80;i++){
+
+let h=document.createElement("div");
+
+h.className="floating";
+
+h.innerHTML="❤️";
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.fontSize=(12+Math.random()*30)+"px";
+
+h.style.animationDuration=
+(5+Math.random()*8)+"s";
+
+h.style.animationDelay=
+Math.random()*5+"s";
+
+document.body.appendChild(h);
+
+}
+
+</script>
+
+</body>
+</html>
